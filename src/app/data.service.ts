@@ -19,4 +19,9 @@ export class DataService {
     this.cities =  this.http.delete<City[]>('/api/city/'+id);
     console.log(id);
   }
+
+  public updateCity(city : City){
+    this.cities = this.http.put<City[]>('/api/city/', {city: city});
+    console.log(name);
+  }
 }

@@ -14,7 +14,9 @@ export class UpdateCityComponent implements OnInit {
   constructor(dataService : DataService) {
     this.data = dataService;
    }
-   updateCity(name : string){}
+   updateCity(city:City){
+     this.data.updateCity(city);
+    }
 
   ngOnInit() {
     this.city = new City();
