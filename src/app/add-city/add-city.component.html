@@ -1,0 +1,29 @@
+<div class="col-md-12">
+  <form (ngSubmit)="addCity(addForm)" #addForm="ngForm">
+    <div class="form-group">
+      <legend>Add city</legend>
+        <div>
+          <input class="form-control" [(ngModel)]="newCity.name" name="cityname" placeholder="Name" required>
+        </div>
+        <div class="error" *ngIf="addForm.hasError('required', 'cityname')">City name is required</div>
+        <div>
+          <input class="form-control" [(ngModel)]="newCity.countrycode" name="countrycode" 
+          placeholder="Country Code" required pattern="^GBR$|^IRL$">
+        </div>
+          <div class="error" *ngIf="addForm.hasError('required', 'countrycode')">Country code is required</div>
+        <div>
+          <input class="form-control" [(ngModel)]="newCity.district" name="district" placeholder="District" required>
+        </div>
+        <div class="error" *ngIf="addForm.hasError('required', 'district')">District is required</div>
+        <div>
+          <input class="form-control" [(ngModel)]="newCity.population" type="number" name="Population" placeholder="population" required>
+        </div>
+        <div class="error" *ngIf="addForm.hasError('required', 'Population')">Population is required.</div>
+        <input type="submit" value="Submit" [disabled]="!addForm.valid">
+      </div>
+  </form>
+</div>
+
+
+
+

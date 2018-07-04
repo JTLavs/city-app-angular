@@ -1,1 +1,25 @@
-/* You can add global styles to this file, and also import other style files */
+.list{
+    text-align: left;
+    float: left;
+}
+.detail{
+    color : black;
+    font-size:25px;
+    padding:20px;
+    text-align:center;
+    border:2px solid red;
+    position:sticky;
+}
+element {
+    border:2px solid blue;
+}
+form input.ng-valid{
+    background:lightgreen;
+}
+form input.ng-invalid{
+    background : pink;
+}
+.error{
+    color:red;
+    font-size:15px;
+}

@@ -50,6 +50,8 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
+            "port" : 8001,
+            "host" : "192.168.0.140",
             "browserTarget": "city-app:build"
           },
           "configurations": {

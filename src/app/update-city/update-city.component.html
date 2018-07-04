@@ -1,0 +1,22 @@
+<div class="col-md-12" style="padding:20px;">
+  <form>
+      <div class="form-group">
+      <select [(ngModel)]="city.name" name="name">
+        <option *ngFor="let city of data.cities|async">{{city.name}}</option>
+      </select>
+      </div>
+      <div class="form-group">
+        <input [(ngModel)]="city.countryCode" name="countrycode" type="text" class="form-control" placeholder="Country Code"/>
+      </div>
+      <div class="form-group">
+        <input [(ngModel)]="city.district" name="district" type="text" class="form-control" placeholder="District"/>
+      </div>
+      <div class="form-group">
+        <input [(ngModel)]="city.population" name="population" type="number" class="form-control" placeholder="Population"/>
+      </div>
+      <div class="form-group">
+      <input type="submit" value="Update" class="btn btn-danger" (click)="updateCity()"/>
+      </div>
+    </form>
+ </div>
+ 
